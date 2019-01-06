@@ -1,0 +1,29 @@
+{
+  "name": "insurance",
+  "version": "1.0.0",
+  "description": "API built with MERN for insurance application",
+  "main": "server.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js --exec babel-node",
+    "server": "nodemon server.js --watch server --exec babel-node",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Alejandro Lopez",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "nodemon": "^1.18.8"
+  }
+}

@@ -1,0 +1,1 @@
+export const mongoURI = 'mongodb://ale:ale1234@ds127644.mlab.com:27644/mern';
